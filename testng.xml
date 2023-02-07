@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+ 
+<parameter name="username" value="planittest78@gmail.com"></parameter>
+<parameter name="passwrod" value="123456"></parameter>
+<parameter name="invalidpassword" value="1234"></parameter>
+<parameter name="desktopname" value="Build your own cheap computer"></parameter>
+<parameter name="quantity" value="2"></parameter>
+
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="demowebshop.TestComponents.SubmitOrderTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
