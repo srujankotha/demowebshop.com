@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="demowebshop.TestComponents.ErrorVaalidations">
+      <class name="demowebshop.TestComponents.SubmitOrderTest">
         <methods>
           <include name="teardown"/>
           <include name="Initializedriver"/>
-          <include name="invalidPassword"/>
-          <include name="validCredentials"/>
+          <include name="submitorder"/>
         </methods>
-      </class> <!-- demowebshop.TestComponents.ErrorVaalidations -->
+      </class> <!-- demowebshop.TestComponents.SubmitOrderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

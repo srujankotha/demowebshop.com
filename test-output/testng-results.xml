@@ -2,24 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-07T12:15:30 IST" name="Suite" finished-at="2023-02-07T12:16:14 IST" duration-ms="43871">
+  <suite started-at="2023-02-08T13:12:11 IST" name="Suite" finished-at="2023-02-08T13:12:29 IST" duration-ms="17632">
     <groups>
     </groups>
-    <test started-at="2023-02-07T12:15:30 IST" name="Test" finished-at="2023-02-07T12:16:14 IST" duration-ms="43871">
-      <class name="demowebshop.TestComponents.SubmitOrderTest">
-        <test-method is-config="true" signature="Initializedriver()[pri:0, instance:demowebshop.TestComponents.SubmitOrderTest@43dac38f]" started-at="2023-02-07T12:15:30 IST" name="Initializedriver" finished-at="2023-02-07T12:15:42 IST" duration-ms="11747" status="PASS">
+    <test started-at="2023-02-08T13:12:11 IST" name="Test" finished-at="2023-02-08T13:12:29 IST" duration-ms="17632">
+      <class name="demowebshop.TestComponents.ErrorVaalidations">
+        <test-method is-config="true" signature="Initializedriver()[pri:0, instance:demowebshop.TestComponents.ErrorVaalidations@342c38f8]" started-at="2023-02-08T13:12:11 IST" name="Initializedriver" finished-at="2023-02-08T13:12:26 IST" duration-ms="14541" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Initializedriver -->
-        <test-method signature="submitorder()[pri:0, instance:demowebshop.TestComponents.SubmitOrderTest@43dac38f]" started-at="2023-02-07T12:15:42 IST" name="submitorder" finished-at="2023-02-07T12:16:14 IST" duration-ms="31686" status="PASS">
+        <test-method signature="invalidPassword(java.lang.String,java.lang.String)[pri:0, instance:demowebshop.TestComponents.ErrorVaalidations@342c38f8]" started-at="2023-02-08T13:12:26 IST" name="invalidPassword" finished-at="2023-02-08T13:12:29 IST" duration-ms="2998" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[planittest78@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- submitorder -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:demowebshop.TestComponents.SubmitOrderTest@43dac38f]" started-at="2023-02-07T12:16:14 IST" name="teardown" finished-at="2023-02-07T12:16:14 IST" duration-ms="326" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- demowebshop.TestComponents.SubmitOrderTest -->
+        </test-method> <!-- invalidPassword -->
+      </class> <!-- demowebshop.TestComponents.ErrorVaalidations -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

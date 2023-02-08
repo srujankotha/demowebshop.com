@@ -1,5 +1,6 @@
 package demowebshop.pageobjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,6 +21,7 @@ public class CheckOutPage extends ReusableComponents {
 	WebElement Billingbutton;
 	@FindBy(xpath = "//li[@id=\"opc-shipping\"]//div[@id=\"shipping-buttons-container\"]/input")
 	WebElement ShippingAddressbutton;
+	By radioButton=By.xpath("//label[text()=\"Next Day Air (0.00)\"]/parent::div/input");
 	@FindBy(xpath = "//li[@id=\"opc-shipping_method\"]//div[@id=\"shipping-method-buttons-container\"]//input")
 	WebElement ShippingMethodbutton;
 	@FindBy(xpath = "//li[@id=\"opc-payment_method\"]//div[@id=\"payment-method-buttons-container\"]/input")
@@ -31,7 +33,7 @@ public class CheckOutPage extends ReusableComponents {
 	@FindBy(xpath = "//input[@value=\"Confirm\"]")
 	WebElement confirmorderbutton;
 
-	@FindBy(xpath="//div[@class=\"info\"]//p[text()=\"You will pay by COD\"]") 
+	@FindBy(xpath="//div[@class=\"info\"]//p") 
 	WebElement paymentmode;
 	@FindBy(xpath = "//div[@class=\"title\"]/strong")
 	WebElement ordervalidation;
@@ -55,6 +57,7 @@ public class CheckOutPage extends ReusableComponents {
 	}
 
 	public void ShippingMethod() {
+		waitforLocatortToAppear(radioButton);
 		visiblityofelement(ShippingMethodbutton);
 	}
 
@@ -63,22 +66,27 @@ public class CheckOutPage extends ReusableComponents {
 	}
 
 	public String modeofpayment() {
+		visibilityOfWebElement(paymentmode);
 		return paymentmode.getText();
 	}
 
 	public void Paymentinfo() {
+	
 		visiblityofelement(Paymentinfobutton);
+		
 	}
 
 	public void Confirmorder() {
 		visiblityofelement(confirmorderbutton);
 	}
 
-	public String getorderValidation() {
+	public String getorderMessageValidation() {
+		visibilityOfWebElement(ordervalidation);
 		return ordervalidation.getText();
 	}
 
 	public String getordernumber() {
+		visibilityOfWebElement(ordernumber);
 		return ordernumber.getText();
 	}
 

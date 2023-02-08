@@ -28,7 +28,7 @@ public class ProductCatalogPage extends ReusableComponents {
 	List<WebElement> Desktopslist;
 	@FindBy(xpath = "//span[@itemprop=\"price\"]")
 	WebElement priceofDesktop;
-	@FindBy(xpath = "//input[@id=\"addtocart_72_EnteredQuantity\"]")
+	@FindBy(xpath = "//div[@class=\"add-to-cart-panel\"]//input[1]")
 	WebElement quantityTextbox;
 	@FindBy(xpath = "//div[@class=\"add-to-cart-panel\"]//input[@value=\"Add to cart\"]")
 	WebElement addtocart;

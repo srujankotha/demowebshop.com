@@ -43,7 +43,7 @@ public class SubmitOrderTest extends BaseTest {
 		
 //*************************************cart page******************************
 	
-		String subTotal = cartpage.gettingSubtotalofDektop();
+		String subTotal = cartpage.getSubtotalofDektop();
 		Assert.assertEquals(subTotal, "1630.00");
 		System.out.println("subtotal validated sucesss");
 		cartpage.goToCheckoutPage();
@@ -54,10 +54,15 @@ public class SubmitOrderTest extends BaseTest {
 		checkoutpage.ShippingAddress();
 		checkoutpage.ShippingMethod();
 		checkoutpage.PaymentMethod();
-		//String paymentmode=checkoutpage.modeofpayment();
-	    //System.out.println(paymentmode);
+		String paymentmode=checkoutpage.modeofpayment();
+		Assert.assertTrue(paymentmode.equalsIgnoreCase("You will pay by COD"));
+	    System.out.println(paymentmode);
 		checkoutpage.Paymentinfo();
 		checkoutpage.Confirmorder();
+		String orderConfirMessage=checkoutpage.getorderMessageValidation();
+		Assert.assertTrue(orderConfirMessage.equalsIgnoreCase("Your order has been successfully processed!"));
+		String ordernumber=checkoutpage.getordernumber();
+		System.out.println("ordernumber is "+ordernumber);
 		checkoutpage.continuebutton();
 		checkoutpage.logoutbutton();
 //*************************************		

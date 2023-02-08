@@ -57,8 +57,8 @@ public class BaseTest {
 		// return driver;
 	}
 
-	@AfterMethod
-	public void teardown() {
-		driver.close();
-	}
+//	@AfterMethod
+//	public void teardown() {
+//		driver.close();
+//	}
 }

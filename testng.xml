@@ -5,12 +5,15 @@
 <parameter name="username" value="planittest78@gmail.com"></parameter>
 <parameter name="passwrod" value="123456"></parameter>
 <parameter name="invalidpassword" value="1234"></parameter>
-<parameter name="desktopname" value="Build your own cheap computer"></parameter>
-<parameter name="quantity" value="2"></parameter>
+<parameter name="desktopname" value="Build your own expensive computer"></parameter>
+<parameter name="quantity" value="10"></parameter>
 
   <test thread-count="5" name="Test">
     <classes>
-      <class name="demowebshop.TestComponents.SubmitOrderTest"/>
+    <!--class name="demowebshop.TestComponents.SubmitOrderTest"/-->
+    <!--class name="demowebshop.TestComponents.ParameterValidationTest"></class-->
+    <class name="demowebshop.TestComponents.ErrorVaalidations"></class>
+      <!--class name="demowebshop.SubmitOrderTest"/-->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

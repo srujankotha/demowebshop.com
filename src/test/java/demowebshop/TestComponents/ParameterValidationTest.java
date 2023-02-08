@@ -1,28 +1,25 @@
 package demowebshop.TestComponents;
 
 import java.io.IOException;
-import java.util.List;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
 import demowebshop.BaseTests.BaseTest;
-import demowebshop.pageobjects.CartPage;
-import demowebshop.pageobjects.CheckOutPage;
-import demowebshop.pageobjects.LandingPage;
-import demowebshop.pageobjects.ProductCatalogPage;
 
-public class SubmitOrderTest extends BaseTest {
-
+public class ParameterValidationTest extends BaseTest {
+    @Parameters({"desktopname","username","passwrod"})
 	@Test
-	public void submitorder() throws IOException {
-		String desktopname = "Build your own cheap computer";
+	public void submitorder(String desktopname,String username,String passwrod) throws IOException {
+		//String desktopname = "Build your own cheap computer";
 
-		landingpage.loginapp("planittest78@gmail.com", "123456");
+		landingpage.loginapp(username,passwrod );
 		String validationofid = landingpage.idValidation();
-		Assert.assertTrue(validationofid.equalsIgnoreCase("planittest78@gmail.com"));
+		Assert.assertTrue(validationofid.equalsIgnoreCase(username));
 		System.out.println("id is validated successfull");
 		landingpage.updatecartitems();
 		
@@ -41,9 +38,9 @@ public class SubmitOrderTest extends BaseTest {
 		productcatalog.goToCartHeaderPage();
 		
 //*************************************cart page******************************
-	    String totalofDesktop=cartpage.gettotalOfDesktop();
+	    String totalofDesktop =cartpage.gettotalOfDesktop();
 		String subTotal = cartpage.getSubtotalofDektop();
-		Assert.assertEquals(subTotal,totalofDesktop);
+		Assert.assertEquals(subTotal, totalofDesktop);
 		System.out.println("subtotal validated sucesss");
 		cartpage.goToCheckoutPage();
 		

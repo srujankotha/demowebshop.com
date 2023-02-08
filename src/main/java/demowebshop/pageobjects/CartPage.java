@@ -19,10 +19,14 @@ public class CartPage extends ReusableComponents{
 	@FindBy(xpath="//table[@class=\"cart-total\"]//tr[1]/td/following-sibling::td//span[@class=\"product-price\"]") WebElement subtotalofitem;
 	@FindBy(id="termsofservice") WebElement checkbox;
 	@FindBy(id="checkout") WebElement checkoutbutton;
+	@FindBy(xpath="//table[@class=\"cart-total\"]//tr[4]//strong") WebElement Total;
 
-public String gettingSubtotalofDektop() {
+public String getSubtotalofDektop() {
 	String  actualsubtotal=subtotalofitem.getText();
 	return actualsubtotal;
+}
+public String gettotalOfDesktop() {
+	return Total.getText();
 }
 public void goToCheckoutPage() {
 	checkbox.click();
